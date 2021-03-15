@@ -1,4 +1,5 @@
 module Main where
 
 main :: IO ()
-main = putStrLn "hello, astral 2"
+main = 
+  putStrLn $ "hello, astral 2" <> "3"

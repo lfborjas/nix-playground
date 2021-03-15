@@ -20,7 +20,7 @@ executable astral-arcanum-app
   -- other-modules:
   -- other-extensions:
   build-depends:       
-       base ^>=4.14.0.0
+       base ^>=4.13.0.0
       ,aeson
       ,servant
   hs-source-dirs:      app

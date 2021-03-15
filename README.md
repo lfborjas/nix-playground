@@ -1,5 +1,11 @@
 # Astral Arcanum Backend
 
+## Building
+
+Given nix is installed, this should build the executable for a given repo in the `code` folder:
+
+    nix-build -A astral-arcanum-app ./nix/monorepo.nix
+
 ## Setup
 
 We use [nix](https://nixos.org/guides/install-nix.html) for compiling the packages in this project. At the time of writing, installation on
@@ -24,3 +30,12 @@ I followed these guides:
 I use [`niv`](https://github.com/nmattia/niv) to [pin nixpkgs](https://nix.dev/tutorials/towards-reproducibility-pinning-nixpkgs.html#), and manage other deps. To install:
 
     nix-env -iA nixpkgs.niv
+
+### Troubleshooting
+
+To update to a specific nixpkgs branch:
+    niv update nixpkgs -b release-20.09
+
+To check the default ghc:
+
+    nix-instantiate --eval -E '(import ./nix/release.nix {}).haskellPackages.ghc.version'

@@ -1,4 +1,4 @@
-{ sources ? import ./sources.nix, compiler ? "ghc8103" }:
+{ sources ? import ./sources.nix, compiler ? "ghc884" }:
 with
   { overlay = _: pkgs: 
     {
