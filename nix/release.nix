@@ -1,4 +1,4 @@
-{ sources ? import ./sources.nix, compiler ? "ghc8102" }:
+{ sources ? import ./sources.nix, compiler ? "ghc8103" }:
 with
   { overlay = _: pkgs: 
     {
@@ -8,7 +8,7 @@ with
 import sources.nixpkgs
   { 
     overlays = [ overlay ] ; config = {
-      allowUnfree = true;
+     allowUnfree = true;
       packageOverrides = pkgs: rec {
         haskellPackages = pkgs.haskell.packages."${compiler}".override {
           overrides = self: super: builtins.mapAttrs (name: path: super.callCabal2nix name path {}) (import ./packages.nix);
