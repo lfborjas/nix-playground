@@ -1,4 +1,4 @@
 module Main where
 
 main :: IO ()
-main = putStrLn "hello, astral arcanum"
+main = putStrLn "hello, astral 2"
