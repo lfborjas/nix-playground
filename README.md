@@ -1,10 +1,10 @@
-# Astral Arcanum Backend
+# Backend
 
 ## Building
 
 Given nix is installed, this should build the executable for a given repo in the `code` folder:
 
-    nix-build -A astral-arcanum-app ./nix/monorepo.nix
+    nix-build -A example-app ./nix/monorepo.nix
 
 ## Setup
 
